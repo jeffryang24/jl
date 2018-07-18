@@ -1,0 +1,14 @@
+# control coverage.py
+[run]
+branch = False
+
+source = jl-core
+
+omit = /*/tests/*
+
+[report]
+show_missing = True
+
+[html]
+directory = jl-html-cov
+title = Junks Lab Core Coverage Report

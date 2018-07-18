@@ -4,10 +4,14 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+tox = "*"
+"e1839a8" = {path = ".", editable = true}
 
 [dev-packages]
 pylint = "*"
 sphinx = "*"
+pytest = "*"
+pytest-cov = "*"
 
 [requires]
 python_version = "3.6"
