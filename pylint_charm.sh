@@ -35,10 +35,11 @@ EOF
 
 main() {
   # Get current path.
-  local _CURRENT_PATH="$(cd "$(dirname "$0")" && pwd)"
+  local _current_path
+  _current_path="$(cd "$(dirname "$0")" && pwd)"
 
   # Default _rc_file is relative to current path.
-  local _rc_file="${_CURRENT_PATH}/.pylintrc"
+  local _rc_file="${_current_path}/.pylintrc"
 
   # Save other arguments
   local -a _arguments=()
