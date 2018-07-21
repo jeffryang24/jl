@@ -26,6 +26,18 @@ HERE = os.path.abspath(os.path.dirname(__file__))
 # Requires python
 PYTHON_REQUIRED = '>=3.5.0'
 
+# Classifiers
+CLASSIFIERS = [
+    'Development Status :: 3 - Alpha',
+    'License :: OSI Approved :: MIT License',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.5',
+    'Programming Language :: Python :: 3.6',
+    'Operating System :: POSIX',
+    'Operating System :: Unix'
+]
+
 def long_description():
     """
     Get long description from README.rst.
@@ -49,10 +61,11 @@ setup(
     python_requires=PYTHON_REQUIRED,
     url=PACKAGE_URL,
     license=PACKAGE_LICENSE,
+    classifiers=CLASSIFIERS,
 
     packages=[PACKAGE_NAME],
     entry_points={
-        'console_scripts': ['jtl=' + PACKAGE_NAME + '.jlco:main']
+        'console_scripts': ['jtl=' + PACKAGE_NAME + '.__main__:main']
     },
 
     include_package_data=True,
